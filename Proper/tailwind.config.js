@@ -56,3 +56,4 @@ theme: {
 plugins: [("tailwindcss-animate")],
 }
 
+
