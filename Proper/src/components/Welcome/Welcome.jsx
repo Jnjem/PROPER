@@ -39,7 +39,7 @@ const Welcome = () => {
           viewport={{ once: true }}
           custom={2} // Personaliza el índice de animación
         >
-          Welcome to wellness
+          Welcome to Wellness!
         </motion.h1>
 
         <motion.p

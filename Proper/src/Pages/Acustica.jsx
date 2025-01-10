@@ -2,7 +2,7 @@ import React from "react";
 import CoverflowSwiper from "../components/coverflowSwiper/coverflowSwiper";
 import { Carousel } from "../components/carousel/carousel";
 import FUNCIONMODAL from "../Context/Seccionnutricion";
-
+import ProteinCalculator from "@/components/Calculadoradeproeinas";
 import ELDSP from "../assets/img/ELDSP.png";
 import WPRO from "../assets/img/WPRO.png";
 import PMS from "../assets/img/PMS.png";
@@ -21,6 +21,7 @@ const AcusticaPage = () => {
       <div className="h-[89vh] w-full">
         <Carousel images={images} />
       </div>
+      <div> <ProteinCalculator /></div>
       <div className="mx-auto text-center p-1"></div>
       <div className="w-[90%] mx-auto text-center p-1 mt-4">
         <FUNCIONMODAL />

@@ -15,6 +15,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProductCard from "../components/products/ProductCard";
+import Vid1 from "../Videos/Video1.mp4"
 
 // Simular la carga del JSON
 const proyectosData = [
@@ -22,7 +23,7 @@ const proyectosData = [
     nombre: "Coliseo Live (Medplus)",
     descripcion: "El Coliseo Live actualmente Coliseo Medplus, es el mayor escenario para conciertos del país, cuenta con una capacidad mas de 20.000 personas. Esta obra se realizó en la calle 80 a las afueras de Bogotá D.C., ubicado en el municipio de Cota (Cundinamarca) en la Autopista Bogotá - La Vega, cuenta con 50.000 metros cuadrados de construcción y su costo es de aproximadamente $100 millones de dólares y cuenta con un total de más de 2.000 plazas de parqueo.  ",
     pais: "Cota/Cundinamarca, Colombia",
-    imagen: ColiseoImage
+    video : Vid1
   },
   {
     nombre: "Ciudad Financiera BSCH",
@@ -54,36 +55,7 @@ const proyectosData = [
     pais: "Ciudad Real/Castilla la Mancha, España",
     imagen: Real
   },
-  {
-    nombre: "Nave PC City",
-    descripcion: "Perteneciente a la cadena inglesa PC CITY, empresa líder en la distribución de productos informáticos y con una superficie de 6.400 m².",
-    pais: "Málaga/Andalucía, España",
-    imagen: Pc
-  },
-  {
-    nombre: "Hotel Emperatriz",
-    descripcion: "Ubicado en el casco antiguo de Toledo declarado patrimonio histórico de la humanidad, este hotel Eco-friendly de 3 estrellas, cuenta con 37 habitaciones insonorizadas que oscilan entre los 23 y 32 m².",
-    pais: "Toledo/Castilla la Mancha, España",
-    imagen: Emperatriz
-  },
-  {
-    nombre: "WTC la Cartuja",
-    descripcion: "Edificio de oficinas de 4 plantas con 6,000 m² de área para alquiler, 124 plazas de parking, cafeteria, salas multiusos, despachos temporales, almacenaje, mantenimiento y administración del edificio, para un total de 10.500 m².",
-    pais: "Sevilla/Andalucía, España",
-    imagen: Wtc
-  },
-  {
-    nombre: "Secaderos de Jamon COVAP",
-    descripcion: "Industria que cuenta con una planta de 26.000 m² destinada a la producción de referencias de cerdo de bellota 100% ibérico, con capacidad para albergar 800.000 piezas.",
-    pais: "Pozo blanco/Córdoba, España",
-    imagen: Covap
-  },
-  {
-    nombre: "Gaira Restaurante",
-    descripcion: "Como Director de Proyectos de una constructora local construí la ampliación y remodelación del famoso Restaurante Gaira propiedad de los hermanos Vives. 3 plantas y un magnífico escenario dotado con todos los avances tecnológicos disponibles.",
-    pais: "Bogotá D.C., Colombia",
-    imagen: Gaira
-  }
+  
 ];
 
 export default function Seccionnutricion() {
@@ -117,6 +89,7 @@ export default function Seccionnutricion() {
             descripcion={proyecto.descripcion}
             pais={proyecto.pais}
             imagen={proyecto.imagen}
+            video={proyecto.video}
           />
         ))}
       </div>
@@ -130,6 +103,7 @@ export default function Seccionnutricion() {
                 descripcion={proyecto.descripcion}
                 pais={proyecto.pais}
                 imagen={proyecto.imagen}
+                video={proyecto.video}
                 allowModal={false}
               />
             </div>

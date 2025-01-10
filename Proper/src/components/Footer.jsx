@@ -1,11 +1,11 @@
 import { FaLinkedinIn, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import LogoJavierMartinez from "../assets/img/Logo_Javier_Martinez.png";
+import Logow from "../assets/img/Logow.png";
 
 const sections = [
   {
-    img: LogoJavierMartinez,
+    img: Logow,
     items: [
-      "Theres a trident between nutrition, Habits and exercise. If you controll the 3 of them, you will be complete.",
+      "There's a trident between Nutrition, Habits and exercise. If you controll the 3 of them, you will be complete.",
     ],
   },
 
@@ -31,24 +31,6 @@ const sections = [
   },
 ];
 
-const socialItems = [
-  {
-    name: "Linkedin",
-
-    icon: FaLinkedinIn,
-    link: "https://www.linkedin.com/in/javier-enrique-martínez-silva-81406456/",
-  },
-  {
-    name: "Instagram",
-    icon: FaInstagram,
-    link: "#",
-  },
-  {
-    name: "WhatsApp",
-    icon: FaWhatsapp,
-    link: "https://wa.link/oqox2p",
-  },
-];
 
 const Footer = () => {
   return (
@@ -81,20 +63,9 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-              {section.img === LogoJavierMartinez && (
+              {section.img === Logow && (
                 <div className="flex space-x-4 pt-4">
-                  {socialItems.map((social, i) => (
-                    <a
-                      key={i}
-                      href={social.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white hover:text-gray-400 bg-red-600 p-2 rounded-full font-bold
-                      "
-                    >
-                      <social.icon size={24} />
-                    </a>
-                  ))}
+                  
                 </div>
               )}
             </div>

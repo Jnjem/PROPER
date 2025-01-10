@@ -5,6 +5,7 @@ import perfil2 from '../assets/img/Perfil2_1.jpg';
 import Signature from '../components/signature/Signature.jsx';
 import { TimeLine } from '../components/timeLine/TimeLine';
 import { motion } from 'framer-motion';
+import FoodCalculator from '../components/calculadora.jsx';
 
 const fadeInAnimationVariantLeftToRight = {
   initial: { 
@@ -57,7 +58,7 @@ export default class Empresa extends Component {
             <Signature />
           </div>
         </div>
-
+        <div> <FoodCalculator  /> </div>
         <div className="bg-gray-100 w-full">
           <section
             style={{
