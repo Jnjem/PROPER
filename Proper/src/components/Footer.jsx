@@ -21,12 +21,9 @@ const sections = [
   },
 
   {
-    title: "Contacto",
+    title: "If you have any feedback, Contact through",
     items: [
-      "WhatsApp: +57 3165363352",
-      "Facebook: Javier Martinez",
-      "Correo: gerencia@javieremartinez.co",
-      "Oficina: Calle 160 Nº 73-47 int 4-502 Bogotá D.C. - Colombia",
+      "Gmail: jnjemgg@gmail.com",
     ],
   },
 ];
@@ -74,7 +71,7 @@ const Footer = () => {
 
         <div className="bg-white flex flex-col w-full mx-auto justify-center sm:flex-row text-center text-gray-700">
           <p className="py-4">
-            © Copyright 2024. Designed and Developed by Juan Jose Martinez
+            © Copyright 2025. Designed and Developed by Juan Jose Martinez
           </p>
         </div>
       </div>

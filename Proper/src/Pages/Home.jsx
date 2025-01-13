@@ -1,14 +1,7 @@
 import React from 'react';
 import FUNCIONMODAL from '../context/seccionejercicio.jsx'
 import { Carousel } from "../components/carousel/carousel";
-import calculadora from "../components/calculadora.jsx"
-import WorkExperience from '../components/Workexperience/WorkExperience.jsx'
 import Welcome from "../components/Welcome/Welcome.jsx"
-import Banner1 from '../assets/img/Banners/BANNER_1.png';
-import Rm from '../assets/img/rm.png';
-import Rompido from '../assets/img/rompido.png';
-import Real from '../assets/img/real.png';
-import FoodCalculator from '../components/calculadora.jsx';
 
 const images = [
     { src: "https://images.unsplash.com/photo-1487499648633-2ade40e0f769?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: 'coliseo', titulo: 'Welcome to Wellness', descripcion: 'where you improve your wellbeing' },
