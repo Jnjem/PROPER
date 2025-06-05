@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "../components/carousel/carousel";
-import FUNCIONMODAL from "../Context/Seccionnutricion";
+import FUNCIONMODAL from "../Context/Seccionnutricion.jsx";
 import ProteinCalculator from "@/components/Calculadoradeproeinas";
 import Benefits from "@/components/Benefitsexercise";
 import Goals from "@/components/goals";
