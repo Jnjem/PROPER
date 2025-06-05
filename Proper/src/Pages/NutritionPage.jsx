@@ -6,6 +6,8 @@ import Banner1 from "../assets/img/Banner1.jpg"
 import Banner2 from "../assets/img/Banner2.jpg"
 import Banner3 from "../assets/img/Banner3.jpg"
 import GOF from "../components/Group of food.jsx"
+import St from "../assets/img/NUTRITION/St.jpg"
+import Wha from "../assets/img/NUTRITION/Wha.jpg"
 const fadeInAnimationVariantLeftToRight = {
   initial: { 
       opacity: 0,
@@ -49,27 +51,27 @@ const fadeInAnimationVariantBottomToTop = {
 };
 
 const images = [
-    { src: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: 'Nutrition', titulo: 'How to imporve your nutrition', descripcion: 'This section would cover the funddaments of' },
-    { src: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: 'Wha', titulo: 'What I need to eat', },
+    { src: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: 'Nutrition', titulo: 'How to improve your nutrition', descripcion: 'This section would cover the funddaments of', },
+    { src: [Wha], alt: 'Wha', titulo: 'What I need to eat',},
     { src: "https://images.unsplash.com/photo-1523901839036-a3030662f220?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: 'Mf', titulo: 'Measuring food',},
-    { src: "https://images.unsplash.com/photo-1494597564530-871f2b93ac55?q=80&w=2013&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: 'St', titulo: 'Stablishing a diet',},
+    { src: [St], alt: 'St', titulo: 'Stablishing a diet',},
   ];
 
 
 export default class Nutrition extends Component {
   render() {
     return (
-      <div className='bg-[url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")] bg-blend-darken bg-black bg-opacity-80 h-full bg-cover'>
+      <div className='  bg-gray-100'>
             <div className="h-[89vh] w-full">
                 <Carousel images={images} />
             </div>
         
-        <div className="bg-gray-100 w-full">
+        <div className="bg-gray-100 w-full ">
           <section
             style={{
-              backgroundImage: `linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8)), url(${Banner1})`,
+              backgroundImage: ` url(${Banner1})`,
             }}
-            className="relative h-[50vh] md:h-[60vh] lg:h-[90vh] bg-no-repeat bg-center bg-cover flex items-center justify-center"
+            className="relative h-[50vh] md:h-[60vh] lg:h-[90vh] bg-no-repeat bg-center bg-cover flex items-center justify-center opacity-90"
           >
             <div className="absolute inset-10 bg-black bg-opacity-5" />
             <div className="absolute inset-0 flex items-center justify-center">

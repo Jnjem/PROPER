@@ -14,10 +14,7 @@ export default function Habits() {
     <div className='bg-[url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80")] bg-blend-darken bg-black bg-opacity-80 h-full bg-cover'></div>
     <div className="h-[89vh] w-full">
                     <Carousel images={images} />
-                </div>
-      <div className='divImagenes'>
-        <Contact></Contact>
-      </div>
+                </div> 
       <div/>
     </>
   )

@@ -8,6 +8,7 @@ import Exercise from "./Pages/Exercisepage";
 import Nutrition from "./Pages/NutritionPage";
 import Habits from "./Pages/HabitsPage";
 
+
 function App() {
   const [count, setCount] = useState(0);
 

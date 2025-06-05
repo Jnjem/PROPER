@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import "./coverflowSwiper/coverflowSwiper.css";
-import Modal from "./Modal/modal";
+import Modal from "./modal/Modal";
 
 export function FUNCIONMODAL({
   nombre,
@@ -23,7 +23,6 @@ export function FUNCIONMODAL({
   isCarousel = false,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const formatProjectName = (projectName) => {
     return projectName.replace(/\s+/g, "_");
@@ -36,7 +35,7 @@ export function FUNCIONMODAL({
 
   const totalImages = 5;
 
-  const [currentImages, setCurrentImages] = useState(
+  const [currentImages] = useState(
     Array.from({ length: totalImages }, (_, i) => getImagePath(nombre, i + 1))
   );
 
@@ -54,6 +53,8 @@ export function FUNCIONMODAL({
     openModal();
   };
 
+  const swiperRef = useRef(null);
+
   return (
     <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
       <div className="hover:scale-105 duration-300">
@@ -65,7 +66,9 @@ export function FUNCIONMODAL({
             <video
               src={video}
               className="w-full h-full object-cover"
-                        
+              muted
+              autoPlay
+              loop
             />
           ) : (
             <div
@@ -83,7 +86,7 @@ export function FUNCIONMODAL({
       <Modal open={isModalOpen} onClose={closeModal}>
         <div className="flex flex-col md:flex-row w-full mx-auto bg-white rounded-lg overflow-hidden">
           <div className="w-full flex flex-col">
-            <div className="flex items-center justify-center">
+            <div className="flex items-center 2xl:justify-center 2xl:flex-grow">
               {video ? (
                 <video
                   src={video}
@@ -91,29 +94,58 @@ export function FUNCIONMODAL({
                   className="w-full h-96 object-cover rounded-lg"
                 />
               ) : isCarousel ? (
-                <Swiper
-                  style={{
-                    "--swiper-navigation-color": "#fff",
-                    "--swiper-pagination-color": "#fff",
-                  }}
-                  effect={"coverflow"}
-                  grabCursor={true}
-                  centeredSlides={true}
-                  slidesPerView={1}
-                  loop={false}
-                  modules={[EffectCoverflow, Pagination]}
-                  className="mySwiper"
-                >
-                  {currentImages.map((imagePath, index) => (
-                    <SwiperSlide key={index}>
-                      <img
-                        src={imagePath}
-                        alt="imagen del proyecto"
-                        className="w-full h-auto rounded-lg"
-                      />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
+                <div className="w-full space-y-4 h-96">
+                  <Swiper
+                    style={{
+                      "--swiper-navigation-color": "#fff",
+                      "--swiper-pagination-color": "#fff",
+                    }}
+                    breakpoints={{
+                      1024: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 40,
+                      },
+                      768: {
+                        slidesPerView: 1.1,
+                        spaceBetween: 30,
+                      },
+                      640: {
+                        slidesPerView: 1.1,
+                        spaceBetween: 20,
+                      },
+                      320: {
+                        slidesPerView: 1.1,
+                        spaceBetween: 10,
+                      },
+                    }}
+                    effect={"coverflow"}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    slidesPerView={1}
+                    loop={false}
+                    initialSlide={1}
+                    coverflowEffect={{
+                      rotate: 0,
+                      stretch: -30,
+                      depth: 200,
+                      modifier: 1,
+                      slideShadows: true,
+                    }}
+                    modules={[EffectCoverflow, Pagination]}
+                    className="mySwiper"
+                    ref={swiperRef}
+                  >
+                    {currentImages.map((imagePath, index) => (
+                      <SwiperSlide key={index} className="w-full h-full">
+                        <img
+                          src={imagePath}
+                          alt="imagen del proyecto"
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
               ) : (
                 <div
                   className="w-full h-96 bg-cover bg-center rounded-lg"

@@ -1,3 +1,5 @@
+
+
 import { useState } from 'react';
 
 const categories = {
@@ -63,20 +65,37 @@ const categories = {
   ]
 };
 
+
 function FoodCalculator() {
   const [plate, setPlate] = useState([]);
+  const [weights, setWeights] = useState({});
+
+  const handleWeightChange = (foodName, weight) => {
+    setWeights({ ...weights, [foodName]: weight });
+  };
 
   const addFood = (food) => {
-    setPlate([...plate, food]);
+    const weight = weights[food.name] || 100; // Default weight 100g if not set
+    const factor = weight / 100;
+    const roundToOneDecimal = (num) => parseFloat(num.toFixed(1));
+    const adjustedFood = {
+      ...food,
+      calories: roundToOneDecimal(food.calories * factor),
+      protein: roundToOneDecimal(food.protein * factor),
+      sugars: roundToOneDecimal(food.sugars * factor),
+      saturatedFat: roundToOneDecimal(food.saturatedFat * factor),
+      weight,
+    };
+    setPlate([...plate, adjustedFood]);
   };
 
   const calculateTotals = () => {
     return plate.reduce(
       (totals, food) => {
-        totals.calories += food.calories;
-        totals.protein += food.protein;
-        totals.sugars += food.sugars;
-        totals.saturatedFat += food.saturatedFat;
+        totals.calories += parseFloat(food.calories);
+        totals.protein += parseFloat(food.protein);
+        totals.sugars += parseFloat(food.sugars);
+        totals.saturatedFat += parseFloat(food.saturatedFat);
         return totals;
       },
       { calories: 0, protein: 0, sugars: 0, saturatedFat: 0 }
@@ -98,7 +117,7 @@ function FoodCalculator() {
               <ul className="space-y-2">
                 {plate.map((food, index) => (
                   <li key={index} className="flex justify-between text-green-700">
-                    <span>{food.name}</span>
+                    <span>{food.name} ({food.weight}g)</span>
                     <button
                       onClick={() => setPlate(plate.filter((_, i) => i !== index))}
                       className="text-red-500"
@@ -126,6 +145,13 @@ function FoodCalculator() {
               {foods.map((food, i) => (
                 <li key={i} className="bg-green-50 p-3 shadow-md rounded-lg">
                   <h3 className="font-semibold text-green-700">{food.name}</h3>
+                  <input
+                    type="number"
+                    placeholder="Weight (g)"
+                    value={weights[food.name] || ''}
+                    onChange={(e) => handleWeightChange(food.name, e.target.value)}
+                    className="w-full p-1 border rounded-md"
+                  />
                   <button
                     onClick={() => addFood(food)}
                     className="mt-2 bg-green-600 text-white p-2 rounded-lg hover:bg-green-700"
@@ -143,4 +169,3 @@ function FoodCalculator() {
 }
 
 export default FoodCalculator;
-

@@ -2,16 +2,11 @@
 import { motion } from "framer-motion";
 import { FUNCIONMODAL } from '../components/FUNCIONMODAL'
 import { Titulo } from '../components/titulos';
-import GairaS from '../assets/img/GairaS.png';
-import ELDSP from '../assets/img/ELDSP.png';
+
 import Nutrition from "../assets/img/NUTRICION.png";
 import Hab from '../assets/img/Hab.png';
 import Exer from '../assets/img/Exer.png';
-import WPRO from '../assets/img/WPRO.png';
-import PMS from '../assets/img/PMS.png';
-import TECM from '../assets/img/TECM.png';
-import NMS from '../assets/img/NMS.png';
-import STS from '../assets/img/STS.png';
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -80,7 +75,7 @@ export default function seccionejercicio() {
           viewport={{ once: true }}
           custom={2} 
         >
-          Our three pillars guarantee that you have a healthy and a happy life, read below to know more about the three pillars.
+          Our three pillars guarantee that you have a healthy and a happy life, click below to know more about the three pillars.
         </motion.p>
       </div>
       <div className="hidden md:flex flex-wrap -mx-4">
@@ -92,6 +87,7 @@ export default function seccionejercicio() {
             pais={proyecto.pais}
             imagen={proyecto.imagen}
             isCarousel={proyecto.isCarousel || false}
+            
           />
         ))}
       </div>

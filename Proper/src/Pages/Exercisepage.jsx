@@ -2,6 +2,8 @@ import React from "react";
 import { Carousel } from "../components/carousel/carousel";
 import FUNCIONMODAL from "../Context/Seccionnutricion";
 import ProteinCalculator from "@/components/Calculadoradeproeinas";
+import Benefits from "@/components/Benefitsexercise";
+import Goals from "@/components/goals";
 
 
 const images = [
@@ -17,6 +19,8 @@ const ExercisePage = () => {
       <div className="h-[89vh] w-full">
         <Carousel images={images} />
       </div>
+      <div><Benefits></Benefits> </div>
+      <div> <Goals></Goals> </div>
       <div> <ProteinCalculator /></div>
       <div className="mx-auto text-center p-1"></div>
       <div className="w-[90%] mx-auto text-center p-1 mt-4">
@@ -27,3 +31,4 @@ const ExercisePage = () => {
 };
 
 export default ExercisePage;
+
