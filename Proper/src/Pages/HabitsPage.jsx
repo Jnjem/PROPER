@@ -1,7 +1,6 @@
 import React from 'react'
-import Contact from '../components/contactForm/ContactForm.jsx'
 import { Carousel } from "../components/carousel/carousel.jsx";
-
+import Whathabit from "../components/Whathabit.jsx"
 const images = [
   { src: "https://images.unsplash.com/photo-1564510714747-69c3bc1fab41?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: 'Habits', titulo: 'The power of habits', descripcion: 'This section is to know' },
   { src: "https://images.unsplash.com/photo-1458419948946-19fb2cc296af?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: 'Wh', titulo: 'What is a habit', },
@@ -16,6 +15,7 @@ export default function Habits() {
                     <Carousel images={images} />
                 </div> 
       <div/>
+      <div><Whathabit></Whathabit> </div>
     </>
   )
 }

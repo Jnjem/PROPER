@@ -1,10 +1,12 @@
 import React from "react";
 import { Carousel } from "../components/carousel/carousel";
 import FUNCIONMODAL from "../Context/Seccionnutricion.jsx";
+import Routine from "../components/Routines.jsx";
 import ProteinCalculator from "@/components/Calculadoradeproeinas";
 import Benefits from "@/components/Benefitsexercise";
-import Goals from "@/components/goals";
-
+import Goals from "@/components/goals.jsx";
+import Group from "../components/Group.jsx";
+import Proteinpor from "@/components/Proteinpor.jsx";
 
 const images = [
   { src: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Exercise", titulo: 'Your exercise journey', descripcion: 'In this section you would find:' },
@@ -21,7 +23,10 @@ const ExercisePage = () => {
       </div>
       <div><Benefits></Benefits> </div>
       <div> <Goals></Goals> </div>
+       <div> <Group></Group></div>
+       <dvi> <Proteinpor></Proteinpor></dvi>
       <div> <ProteinCalculator /></div>
+      <div> <Routine></Routine> </div>
       <div className="mx-auto text-center p-1"></div>
       <div className="w-[90%] mx-auto text-center p-1 mt-4">
         <FUNCIONMODAL />

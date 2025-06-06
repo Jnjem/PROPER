@@ -21,7 +21,7 @@ const Welcome = () => {
     <div className="relative w-full h-screen overflow-hidden">
       {/* Video de fondo */}
       <video
-        src="/Videos/Video1.mp4" // Ruta desde la carpeta public
+        src="/Video1.mp4" // Ruta desde la carpeta public
         autoPlay
         loop
         muted

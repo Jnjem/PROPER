@@ -13,7 +13,7 @@ const sections = [
     title: "Navegation",
     items: [
       { name: "Home", link: "/" },
-      { name: "Exercise", link: "/Exercise" },
+      { name: "Exercise", link: "/Acustica" },
       { name: "Nutrition", link: "/Empresa" },
       { name: "Habits", link: "/ContactMe" },
     
