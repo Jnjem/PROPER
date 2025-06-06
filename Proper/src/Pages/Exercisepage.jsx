@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "../components/carousel/carousel";
 import FUNCIONMODAL from "../Context/Seccionnutricion.jsx";
-import Routine from "../components/Routines.jsx";
+import Routines from "@/components/Routines";
 import ProteinCalculator from "@/components/Calculadoradeproeinas";
 import Benefits from "@/components/Benefitsexercise";
 import Goals from "@/components/goals.jsx";
@@ -26,7 +26,7 @@ const ExercisePage = () => {
        <div> <Group></Group></div>
        <dvi> <Proteinpor></Proteinpor></dvi>
       <div> <ProteinCalculator /></div>
-      <div> <Routine></Routine> </div>
+      <div> <Routines></Routines> </div>
       <div className="mx-auto text-center p-1"></div>
       <div className="w-[90%] mx-auto text-center p-1 mt-4">
         <FUNCIONMODAL />
