@@ -1,7 +1,9 @@
 import React from "react";
 import { Carousel } from "../components/carousel/carousel";
 import FUNCIONMODAL from "../Context/Seccionnutricion.jsx";
-import Routines from "@/components/Routines";
+
+import Routines from "@/components/Routine.jsx";
+
 import ProteinCalculator from "@/components/Calculadoradeproeinas";
 import Benefits from "@/components/Benefitsexercise";
 import Goals from "@/components/goals.jsx";
